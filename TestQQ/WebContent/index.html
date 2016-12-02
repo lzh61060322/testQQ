@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测试第三方登录</title>
+<!--QQ js引入文件  -->
+<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="APPID" data-redirecturi="REDIRECTURI" charset="utf-8"></script>
+</head>
+<body>
+
+
+<!-- 进入qq登录授权的页面接口 
+redirect_uri的值为urlEncode之后的值
+client_id为QQ授权给网站的appid的值
+
+-->
+<a href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=&redirect_uri=&state=test"><span id="qqLoginBtn">qq登录</span></a>
+<h3>网页版本</h3>
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=345944416&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:345944416:52" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+<a target="_blank" href="http://sighttp.qq.com/msgrd?v=1&uin=345944416&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:345944416:52" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+<h3>第三种客户端式</h3>
+<a href="tencent://Message/?Uin=981525696&websiteName=q-zone.qq.com&Menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:981525696:51" alt="点击这里给我发消息"></a>
+<script type="text/javascript">
+    QC.Login({
+       btnId:"qqLoginBtn"    //插入按钮的节点id
+});
+</script>
+
+</body>
+</html>
